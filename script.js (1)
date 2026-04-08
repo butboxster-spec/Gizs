@@ -1,0 +1,5 @@
+function beli(nama, harga){
+    localStorage.setItem("produk", nama);
+    localStorage.setItem("harga", harga);
+    window.location.href = "bayar.html";
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Metode Pembayaran</h1>
+</header>
+
+<div class="container">
+    <h2>Produk: <span id="produk"></span></h2>
+    <h2>Total: Rp <span id="harga"></span></h2>
+
+    <h3>Pilih Metode Pembayaran:</h3>
+    <select>
+        <option>Transfer Bank (BCA, BRI)</option>
+        <option>COD (Bayar di Tempat)</option>
+        <option>E-Wallet (Dana, OVO, GoPay)</option>
+    </select>
+
+    <br><br>
+    <button onclick="bayar()">Bayar Sekarang</button>
+</div>
+
+<script>
+document.getElementById("produk").innerText = localStorage.getItem("produk");
+document.getElementById("harga").innerText = localStorage.getItem("harga");
+
+function bayar(){
+    alert("Pembayaran berhasil! Terima kasih sudah belanja 😊");
+}
+</script>
+
+</body>
